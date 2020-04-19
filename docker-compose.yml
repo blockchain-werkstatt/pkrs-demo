@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  identity-app:
+   build: ./identity-app
+   container_name: identity-app
+   ports:
+     - 8000:8001
+   environment:
+     - ETHEREUM_ADDRESS=http://localhost:8545
+     - FAUCET_ADDRESS=http://localhost:4000
+   depends_on:
+     - identity-backend
+     - testrpc_server
+
+  identity-backend:
+   build: ./identity-backend
+   container_name: identity-backend
+   ports:
+     - 4000:4000
+   environment:
+     - PORT=4000
+     - ETHEREUM_ADDRESS=http://testrpc_server:8545
+     - SEED_PHRASE=route harbor drastic pigeon asset circle vintage robust catalog vendor okay vault
+     - GAS_LIMIT=6721975
+     - GAS_PRICE=20000000000
+     - AMOUNT=650000000000000000
+     - NO_OF_ADDRESSES=10
+   depends_on:
+     - testrpc_server
+   links:
+     - testrpc_server:testrpc_server
+
+  testrpc_server:
+    build: ./testrpc-network
+    container_name: testrpc_server
+    ports:
+      - 8545:8545

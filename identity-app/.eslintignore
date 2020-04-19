@@ -1,0 +1,6 @@
+build/*.js
+config/*.js
+src/components/*.vue
+src/components/digital_identity/*.vue
+src/components/
+src/App.vue
