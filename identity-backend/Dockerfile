@@ -10,7 +10,7 @@ RUN npm install
 RUN npm run postinstall
 
 # Run only in ODK Prod , Hack to remove exposed port by null 
-RUN npm run ipfsprodfix
+# RUN npm run ipfsprodfix
 
 #Expose the port
 EXPOSE 4000
