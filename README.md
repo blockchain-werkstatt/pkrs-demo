@@ -1,4 +1,10 @@
-# Docker Infrastructure
+# Partial Knowledge Recovery Scheme (PKRS) Demonstrator
+
+- PKRS allows the recovery of an encrypted private key through the use of personal security questions
+- It is based on Shamir’s secret sharing algorithm
+- This blockchain Self-sovereign Identity use case makes use of it
+- 
+## Installation
 
 Simple development set up which allows to run all projects from the single entry point.
 
@@ -13,7 +19,6 @@ Folder structure must be the following:
 
 To run project in dev mode:
 ```bash
-$ cd docker_infrastructure
 $ sudo docker-compose up --build
 ```
 
