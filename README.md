@@ -3,6 +3,8 @@
 - PKRS allows the recovery of an encrypted private key through the use of personal security questions
 - It is based on Shamir’s secret sharing algorithm
 - This blockchain Self-sovereign Identity use case makes use of it
+- Detailed information can be found [here](https://www.fabiankirstein.de/data/2020/A%20Private%20Key%20Recovery%20Scheme%20Using%20Partial%20Knowledge.pdf)
+
 
 ## Installation
 
